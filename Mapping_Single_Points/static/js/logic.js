@@ -7,9 +7,10 @@ let map = L.map("mapid", {
       40.7, -94.5
     ],
     zoom: 4
-  })
-  
-console.log("chek");
+  });
+
+//Add a maker to the map for Los Angeles, California 
+let marker = L.marker([34.0522, -118.2437]).addTo(map);
 
 //Add tile layer that will be the background of the map
 //Note: had to use code from John in Slack, not from the modules 
@@ -18,9 +19,10 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/t
     <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
 	accessToken: API_KEY
-})
-
-console.log("streets");
+});
 
 //Then we add our 'graymap' tile layer to the map 
 streets.addTo(map); 
+
+
+
